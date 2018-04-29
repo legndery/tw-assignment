@@ -1,34 +1,23 @@
+const CommandLineComponent = require('./components/commandline.component');
 const Conference = require('./components/conference.component');
+const InputParser=require('./utils/LectureParser');
+const ActivityController = require('./controllers/activity.controller');
+const TrackController = require('./controllers/track.controller');
+const Models = {
+    activity: require('./models/activity.model'),
+    track: require('./models/track.model')
+};
+const Scheduler = require('./services/scheduling.service');
+//start the APP
+const cli = new CommandLineComponent(process.argv);
+cli.commander((options)=>{ //has data and file
 
-const argv = process.argv;
-console.dir(process.argv);
-if(argv.length == 2){
-
-}else if(argv.length >2){
-    
-}
-///////////
-
-///////////
-function printHelp(){
-console.error(
-`Usage:
-node app.js [-h|-d|-u]
-
-To enter data as input:
-node app.js 
-OR
-node app.js -d
-then type the data in stdin, and end the stream with ^D(buggy in Windows)
-
-To enter URL as input:
-node app.js -u=<path of file>
-
-To enter both URL and data as input(it will be appended):
-node app.js -d  -u <path to file>
-
-To print this help:
-node app.js -h
-`
-)
-}
+    options.ActivityController = ActivityController;
+    options.Models = Models;
+    options.InputParser = InputParser;
+    options.Scheduler = Scheduler;
+    options.TrackController = TrackController;
+    const conference = new Conference(options);
+    conference.schedule();
+    console.log(conference.toString());
+});
