@@ -81,7 +81,7 @@ There are two components showing on the screen, the component which is bootstrap
 - `conference.component` is the component which encapsulates all the controllers, services and models. The driver programs just passes argumensts to this component and starts it.
 
 #### Models and Controllers
-- `activity.model` and `activity.controller`, these two are the unit of this conference. Every activity like Talks, Lunch or Networking Event is controlled by them.
+- *`activity.model`* and `activity.controller`, these two are the unit of this conference. Every activity like Talks, Lunch or Networking Event is controlled by them.
 - `track.model` and `track.controller`, these two are the containers of activities. Conference is made of Multple tracks. Notable a pair of 2(morning and afternoon tracks)
 
 #### Services and Utils
