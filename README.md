@@ -1,4 +1,6 @@
-# <a name="title"></a>Coding problem: Conference Track Management 
+# <a name="title"></a>Coding problem: Conference Track Management
+
+## The Problem
 You are planning a big programming conference and have received many proposals which have 
 passed the initial screen process but you're having trouble fitting them into the time constraints 
 of the day -- there are so many possibilities! So you write a program to do it for you. 
@@ -63,3 +65,5 @@ to exactly duplicate the sample output given here.
 `03:00PM` Ruby on Rails Legacy App Maintenance 60min\
 `04:00PM` Rails for Python Developers lightning\
 `05:00PM` Networking Event
+
+## The solution
