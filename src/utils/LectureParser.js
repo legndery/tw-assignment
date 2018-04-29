@@ -9,7 +9,7 @@ class LectureParser {
         ////////////////////
         this.generateInputLines(options)
     }
-    generateInputLines({lines,file}){
+    generateInputLines({data:lines,file}){
         if(!(lines || file))
             throw new Error("No Lines or File Url provided");
 
@@ -30,8 +30,9 @@ class LectureParser {
     parse(){
         return this.lines.map((l)=>{
             const lineContent = this.PATTERN.exec(l);
+            if(!lineContent) return null;
             return [lineContent.input.trim(), this.convertToTimeInt(lineContent[1].trim())];
-        });
+        }).filter((elem)=>elem);
     }
     addLines(line){
         this.lines.push(line);
