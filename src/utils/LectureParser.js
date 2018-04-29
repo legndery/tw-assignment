@@ -3,7 +3,7 @@ class LectureParser {
     constructor(options){
         this.lines = [];
         this.file = "";
-        this.PATTERN = /(.*?)(\d+min|\d*lightning)/i
+        this.PATTERN = /(\d+min|\d*lightning)/i
         this.parsedLines = []
         this.isParsed = false;
         ////////////////////
@@ -30,7 +30,7 @@ class LectureParser {
     parse(){
         return this.lines.map((l)=>{
             const lineContent = this.PATTERN.exec(l);
-            return [lineContent[1].trim(), this.convertToTimeInt(lineContent[2].trim())];
+            return [lineContent.input.trim(), this.convertToTimeInt(lineContent[1].trim())];
         });
     }
     addLines(line){
