@@ -1,0 +1,24 @@
+{
+  "name": "tw-assignment",
+  "version": "1.0.0",
+  "description": "- [The Problem](#the-problem) - [The Solution](#the-solution) ## The Problem You are planning a big programming conference and have received many proposals which have  passed the initial screen process but you're having trouble fitting them into the time constraints  of the day -- there are so many possibilities! So you write a program to do it for you.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha || true",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legndery/tw-assignment.git"
+  },
+  "author": "ar_itra@yahoo.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/legndery/tw-assignment/issues"
+  },
+  "homepage": "https://github.com/legndery/tw-assignment#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  }
+}
