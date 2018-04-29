@@ -6,7 +6,7 @@ class TrackModel {
         this.remainingTime = time;
     }
     getTime() {
-        return time;
+        return this.time;
     }
     addActivity(activity) {
         if (this.remainingTime >= activity.getTime()) {
