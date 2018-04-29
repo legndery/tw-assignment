@@ -94,7 +94,7 @@ There are two components showing on the screen, the component which is bootstrap
 ```
 node src/app.js -u data/data.txt
 ```
-- check out [Data.txt](./tree/master/data/data.txt)], which is basically same as Sample Input in the Question section  
+- check out [Data.txt](/legndery/tw-assignment/blob/master/data/data.txt), which is basically same as Sample Input in the Question section  
 ### Sample outputs:
 Track 1:  
 `09:00AM` Writing Fast Tests Against Enterprise Rails 60min  
