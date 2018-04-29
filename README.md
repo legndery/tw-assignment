@@ -14,7 +14,7 @@ npm start -- -u data/data.txt
 `npm start`
 
 #### To test
-Mocha and chai are used for making unit test cases.
+Mocha and chai are used for making unit test cases.  
 `npm test`
 
 ## The Problem
