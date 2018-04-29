@@ -1,6 +1,22 @@
 # Coding problem: Conference Track Management
+- [Application Running and testing Instructions](#running-and-testing-application)
 - [The Problem](#the-problem)
 - [The Solution](#the-solution)
+## Running and testing Application
+#### To run
+```bash
+git clone git@github.com:legndery/tw-assignment.git
+cd tw-assignment
+npm i
+npm start -- -u data/data.txt
+```
+**To check full usage**  
+`npm start`
+
+#### To test
+Mocha and chai are used for making unit test cases.  
+`npm test`
+
 ## The Problem
 You are planning a big programming conference and have received many proposals which have 
 passed the initial screen process but you're having trouble fitting them into the time constraints 
@@ -89,6 +105,10 @@ There are two components showing on the screen, the component which is bootstrap
 - **`LectureParser`** This badass util splits then input and returns a 2D array. The internal array containes two values,
     - The actualy name of the Talk including the time. 
     - The time in mins as integer for easy sorting and stuff.
+
+### Test Framework
+ - `/test/*/*.test.js` these files are test cases written with **`chai`** and executed with **`mocha`** 
+    - There are total 5 classes that are tested
 
 ### Sample inputs:
 ```
