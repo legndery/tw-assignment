@@ -77,22 +77,24 @@ to exactly duplicate the sample output given here.
 This problem was solved using Object Oriented approach though JS doesn't support full-fledged OOP concepts like interfaces and whatnot .. um.. OOPsie Daisy (*horrible pun intended*)
 #### Components
 There are two components showing on the screen, the component which is bootstrapping the input and another which is the conference itself.
-- `commandline.component` reads from the commandline and parses `arguments`. like `node src/app.js -u data/data.txt`, it will parse the arguments and actually ready the conference class.
-- `conference.component` is the component which encapsulates all the controllers, services and models. The driver programs just passes argumensts to this component and starts it.
+- **`commandline.component`** reads from the commandline and parses `arguments`. like **`node src/app.js -u data/data.txt`**, it will parse the arguments and actually ready the conference class.
+- **`conference.component`** is the component which encapsulates all the controllers, services and models. The driver programs just passes argumensts to this component and starts it.
 
 #### Models and Controllers
-- *`activity.model`* and `activity.controller`, these two are the unit of this conference. Every activity like Talks, Lunch or Networking Event is controlled by them.
-- `track.model` and `track.controller`, these two are the containers of activities. Conference is made of Multple tracks. Notable a pair of 2(morning and afternoon tracks)
+- **`activity.model`** and **`activity.controller`**, these two are the unit of this conference. Every activity like Talks, Lunch or Networking Event is controlled by them.
+- **`track.model`** and **`track.controller`**, these two are the containers of activities. Conference is made of Multple tracks. Notable a pair of 2(morning and afternoon tracks)
 
 #### Services and Utils
-- `scheduling.service` <= this guy contains the actual `First fit decreasing` algorithm. Could have improved this by making it more generic. Certainly that's gonna be a `@TODO`
-- `LectureParser` This badass util splits then input and returns a 2D array. The internal array containes two values, **0)** The actualy name of the Talk including the time. **1)** The time in mins as integer for easy sorting and stuff.
+- **`scheduling.service`** <= this guy contains the actual `First fit decreasing` algorithm. Could have improved this by making it more generic. Certainly that's gonna be a **`@TODO`**
+- **`LectureParser`** This badass util splits then input and returns a 2D array. The internal array containes two values,
+    - The actualy name of the Talk including the time. 
+    - The time in mins as integer for easy sorting and stuff.
 
 ### Sample inputs:
 ```
 node src/app.js -u data/data.txt
 ```
-- check out [Data.txt](./tree/master/data/data.txt)], which is basically same as Sample Input in the Question section
+- check out [Data.txt](./tree/master/data/data.txt)], which is basically same as Sample Input in the Question section  
 ### Sample outputs:
 Track 1:  
 `09:00AM` Writing Fast Tests Against Enterprise Rails 60min  
